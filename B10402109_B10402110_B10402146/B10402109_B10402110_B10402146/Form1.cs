@@ -19,7 +19,8 @@ namespace B10402109_B10402110_B10402146
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            ClassA n = new ClassA();
+            label1.Text = n.number().ToString();
         }
     }
 }
