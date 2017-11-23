@@ -19,8 +19,24 @@ namespace B10402109_B10402110_B10402146
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ClassA n = new ClassA();
-            label1.Text = n.number().ToString();
+            comboBox1.Items.Clear();
+
+            ClassA num = new ClassA();
+            ClassB isPrime = new ClassB();
+            int x = num.number();
+
+            label1.Text = x.ToString();
+
+            if (x < 2) comboBox1.Items.Add("沒有質數");
+            else
+                for (int i = 2; i <= x; i++)
+                {
+                    isPrime.n = i;
+                    if (isPrime.GetNumber().Equals(0))
+                    {
+                        comboBox1.Items.Add(i);
+                    }
+                }
         }
     }
 }
